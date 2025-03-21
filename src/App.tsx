@@ -1,13 +1,14 @@
 import './App.css'
+import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 
 function App() {
 
   return (
-    <div className='container'>
+    <div>
       <Header/>
-      <main className='about-me'>
-        <div>
+      <main>
+        <div className='text-justify flex flex-col justify-center items-center mx-auto p-8'>
           <p>
             I'm Rafael Ortiz Nunes, 20y developer. I like Computer Science, Philosophy, Literature and High Performance.
             But also, firstly I like to learn :)
@@ -18,10 +19,7 @@ function App() {
           </p>
         </div>
       </main>
-      <footer className='footer'>
-        <p>Data Atual Mato Grosso do Sul, Brasil</p>
-        <img src="brasil.png" alt="Bandeira do Brasil" className='brasil-image' />
-      </footer>
+      <Footer/>
     </div>
   )
 }
