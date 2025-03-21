@@ -2,7 +2,7 @@
 
 export const AboutMe = () => {
     return(
-        <div>
+        <div className="bg-black">
             
         </div>
     )
