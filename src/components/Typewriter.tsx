@@ -1,13 +1,14 @@
-import { useActionState, useCallback, useEffect, useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 
 interface TypewriterProps {
     text: string;
     delay: number
     infinite?: boolean
+    className?: string
 }
 
-export const Typewriter = ({ text, delay, infinite }: TypewriterProps) => {
+export const Typewriter = ({ text, delay, infinite, className }: TypewriterProps) => {
 
     const [currentText, setCurrentText] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,6 +34,6 @@ export const Typewriter = ({ text, delay, infinite }: TypewriterProps) => {
     }, [currentIndex, delay, text])
 
     return (
-        <span className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-50 to-gray-600">{currentText}</span>
+        <span className={`text-md font-black ${className}`}>{currentText}</span>
     )
 }
